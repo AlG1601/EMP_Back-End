@@ -38,8 +38,18 @@ status_usuario boolean,
 data_cadastro date
 );
 
+/*
 CREATE TABLE IF NOT EXISTS Lancamento (
 id_lancamento int(4),
+valor decimal (20),
+tipo_conta varchar(16),
+data_lancamento datetime,
+tipo_lancamento varchar(16),
+id_cnpj INT(4) NOT NULL,
+forma_pagamento varchar(16),
+observacao varchar(200),
+status_lancamento boolean,
+foreign key (id_cnpj) references CNPJ (id_cnpj)
 data_lancamento datetime,
 descricao varchar (300),
 tipo_lancamento varchar(16),
@@ -52,7 +62,7 @@ id_cnpj INT(4),
 cpf varchar(11) not null,
 foreign key (id_cnpj) references CNPJ (id_cnpj),
 foreign key (cpf) references Usuario_pf(cpf)
-);
+);*/
 
 CREATE INDEX idx_id_lancamento ON Lancamento(id_lancamento);
 CREATE TABLE IF NOT EXISTS Conta (
